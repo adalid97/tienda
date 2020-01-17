@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const apiRoutes = require('./routes.js');
 
 const app = express();
 
@@ -13,4 +14,9 @@ app.get("/hola", (req, res) =>
     res.send("Hola Hola")
 );
 
+app.use('/api', apiRoutes);
+app.use(express.json());
+
 app.listen(3000, () => console.log("Servidor iniciado..."));
+
+
