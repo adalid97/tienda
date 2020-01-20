@@ -14,8 +14,9 @@ app.get("/hola", (req, res) =>
     res.send("Hola Hola")
 );
 
+app.use(express.json());    // IMPORTANTE: Poner esto antes de las rutas
 app.use('/api', apiRoutes);
-app.use(express.json());
+
 
 app.listen(3000, () => console.log("Servidor iniciado..."));
 
