@@ -9,7 +9,6 @@ const Articulo = mongoose.model('Articulo',
 );
 
 module.exports = {
-    Cliente: Cliente,
-    Articulo: Articulo
+    Cliente,
+    Articulo
 }
-
